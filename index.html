@@ -9,11 +9,7 @@
 <meta property="og:description" content="I scored 97% with my soulmate 😍 Try it with your name!">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,400&family=Nunito:wght@300;400;700;800&display=swap" rel="stylesheet">
 
-<!-- ① SOCIAL BAR AD -->
-
-<script src="https://pl29176193.profitablecpmratenetwork.com/77/a1/d6/77a1d663eedccefa87490059e07e4c89.js"></script>
-
-<!-- ② POPUNDER AD (fires on first click anywhere on page) -->
+<!-- ② POPUNDER → correct placement: before </head> -->
 
 <script src="https://pl29177855.profitablecpmratenetwork.com/44/a3/66/44a366d156c400c0c1054c650a3015f7.js"></script>
 
@@ -82,7 +78,6 @@ h1 {
   font-size:13px; color:#ffffff66;
   text-align:center; margin-bottom:36px; line-height:1.6;
 }
-
 .input-card {
   width:100%;
   background:linear-gradient(145deg,#1e0f30,#160d24);
@@ -108,7 +103,6 @@ h1 {
 }
 .name-input::placeholder { color:#ffffff33; font-weight:300; font-size:15px; }
 .name-input:focus { border-color:#ff6b9d; box-shadow:0 0 20px #ff6b9d33; }
-
 .calc-btn {
   width:100%; margin-top:18px; padding:18px;
   background:linear-gradient(135deg,#ff4d8d,#c026d3);
@@ -119,7 +113,6 @@ h1 {
 }
 .calc-btn:hover { transform:translateY(-2px); box-shadow:0 12px 40px #ff4d8d77; }
 .calc-btn:active { transform:translateY(0); }
-
 .privacy-note { margin-top:14px; font-size:11px; color:#ffffff33; text-align:center; }
 .share-count { margin-top:26px; font-size:13px; color:#ffffff55; text-align:center; }
 .share-count span { color:#ff6b9d; font-weight:700; }
@@ -171,7 +164,6 @@ h1 {
   font-size:clamp(30px,10vw,50px); font-style:italic;
   color:#ffd700; filter:drop-shadow(0 0 20px #ffd70055);
 }
-
 .score-card {
   width:100%;
   background:linear-gradient(145deg,#1e0f30,#2a1040);
@@ -193,7 +185,6 @@ h1 {
   margin-bottom:6px;
 }
 .hearts-divider { font-size:20px; margin:14px 0; letter-spacing:4px; }
-
 .score-circle-wrap { display:flex; align-items:center; justify-content:center; margin:10px 0 20px; }
 .score-circle {
   width:130px; height:130px; border-radius:50%;
@@ -204,12 +195,10 @@ h1 {
 .score-circle::before { content:''; position:absolute; inset:10px; background:#160d24; border-radius:50%; }
 .score-number { position:relative; z-index:1; font-size:36px; font-weight:800; color:#fff; }
 .score-number span { font-size:18px; }
-
 .score-verdict {
   font-family:'Cormorant Garamond',serif; font-size:20px;
   font-style:italic; color:#ffd700; margin-bottom:20px;
 }
-
 .traits-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:8px; }
 .trait-pill { background:#0d0618; border:1px solid #ff6b9d33; border-radius:12px; padding:10px 12px; text-align:left; }
 .trait-pill .t-label { color:#ff6b9d99; font-size:10px; letter-spacing:1px; text-transform:uppercase; margin-bottom:3px; }
@@ -247,8 +236,8 @@ h1 {
 .ad-bottom {
   position:fixed; bottom:0; left:0; right:0; z-index:100;
   background:#1a0d2e; border-top:1px solid #3d1a5e;
-  display:flex; align-items:center; justify-content:center;
-  min-height:60px; padding:6px;
+  display:flex; flex-direction:column; align-items:center;
+  justify-content:center; padding:6px;
 }
 
 @keyframes fadeUp {
@@ -287,7 +276,7 @@ h1 {
       </button>
       <p class="privacy-note">🔒 We never store your name. Just pure magic.</p>
     </div>
-    <p class="share-count">💌 <span>847,312</span> people discovered their soulmate today</p>
+    <p class="share-count">💌 <span>847,313</span> people discovered their soulmate today</p>
   </div>
 
   <!-- SCREEN 2: LOADING -->
@@ -340,7 +329,7 @@ h1 {
 
 </div>
 
-<!-- ③ BOTTOM STICKY BANNER 320x50 -->
+<!-- ③ BOTTOM STICKY BANNER 320x50 → correct placement: in body -->
 
 <div class="ad-bottom">
   <script>
@@ -355,7 +344,14 @@ h1 {
   <script src="https://www.highperformanceformat.com/6c7f465a1f5b944164943c5162da6ca4/invoke.js"></script>
 </div>
 
+<!-- ① SOCIAL BAR → correct placement: right before </body> -->
+
+<script src="https://pl29176193.profitablecpmratenetwork.com/77/a1/d6/77a1d663eedccefa87490059e07e4c89.js"></script>
+
 <script>
+// ── SMARTLINK URL (④ fires on share button clicks) ──
+const SMARTLINK = "https://www.profitablecpmratenetwork.com/z4s3hbf3?key=1c6dbadfbae1ec51430900f35a78aea5";
+
 // ── DATA ──────────────────────────────────────────
 const SOULMATE_NAMES = [
   "Sophia","Emma","Liam","Noah","Olivia","Ava","Ethan","Lucas",
@@ -420,22 +416,13 @@ let resultData = {};
   for (let i = 0; i < 120; i++) {
     const s = document.createElement('div');
     s.className = 'star';
-    s.style.cssText = `
-      left:${Math.random()*100}%;
-      top:${Math.random()*100}%;
-      width:${Math.random()*2.5+0.5}px;
-      height:${Math.random()*2.5+0.5}px;
-      animation-delay:${Math.random()*4}s;
-      animation-duration:${2+Math.random()*3}s;
-    `;
+    s.style.cssText = `left:${Math.random()*100}%;top:${Math.random()*100}%;width:${Math.random()*2.5+0.5}px;height:${Math.random()*2.5+0.5}px;animation-delay:${Math.random()*4}s;animation-duration:${2+Math.random()*3}s;`;
     c.appendChild(s);
   }
 })();
 
 // ── STEP 1: BUTTON CLICK ──────────────────────────
-// Popunder script already loaded in <head>
-// It fires automatically on FIRST click on the page
-// So when user clicks "Reveal My Soulmate" = popunder triggers ✅
+// Popunder in <head> fires automatically on first click ✅
 function startCalculation() {
   const input = document.getElementById('nameInput');
   userName = input.value.trim();
@@ -481,7 +468,6 @@ function showResultScreen() {
   document.getElementById('trait-met').textContent            = resultData.met;
   document.getElementById('lucky-date').textContent           = resultData.luckyDate;
 
-  // Animate score ring
   const circle = document.getElementById('score-circle');
   const numEl  = document.getElementById('score-number');
   let cur = 0;
@@ -494,16 +480,22 @@ function showResultScreen() {
   }, 28);
 }
 
-// ── SHARE ─────────────────────────────────────────
+// ── SHARE + SMARTLINK ─────────────────────────────
 function shareWhatsApp() {
+  // ④ Smartlink fires on share click
+  window.open(SMARTLINK, '_blank');
   const url  = encodeURIComponent(window.location.href);
   const text = encodeURIComponent(
     `💕 I got ${resultData.score}% Soulmate Compatibility! My soulmate is ${resultData.soulmateName}! Try it with YOUR name 👇`
   );
-  window.open(`https://wa.me/?text=${text}%20${url}`, '_blank');
+  setTimeout(() => {
+    window.open(`https://wa.me/?text=${text}%20${url}`, '_blank');
+  }, 500);
 }
 
 function copyLink() {
+  // ④ Smartlink fires on copy click too
+  window.open(SMARTLINK, '_blank');
   navigator.clipboard.writeText(window.location.href).then(() => {
     const btn = document.querySelector('.btn-copy');
     btn.textContent = '✅ Copied!';
@@ -517,7 +509,6 @@ function resetAll() {
   window.scrollTo({ top:0, behavior:'smooth' });
 }
 
-// Enter key support
 document.getElementById('nameInput').addEventListener('keydown', e => {
   if (e.key === 'Enter') startCalculation();
 });
